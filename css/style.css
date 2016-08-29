@@ -1,0 +1,44 @@
+.table-customers > thead > tr > th,
+.table-customers > tbody > tr > th,
+.table-customers > tfoot > tr > th,
+.table-customers > thead > tr > td,
+.table-customers > tbody > tr > td,
+.table-customers > tfoot > tr > td {
+	padding: 4px;
+	vertical-align: middle;
+}
+
+.table-customers td:nth-child(1) {
+	width: 40px;
+}
+
+.table-customers td:nth-child(2) {
+	width: 15%;
+}
+
+.table-customers td:nth-child(3) {
+	width: 16.66%;
+}
+
+.table-customers td:nth-child(3) {
+	width: 16.66%;
+}
+
+.table-customers td:nth-child(5) {
+	width: 40.02%;
+}
+
+.table-customers td:nth-child(6) {
+	width: 92px;
+}
+
+.table-customers .prop {
+	display: inline-block;
+	padding: 0 4px;
+	line-height: 2em;
+}
+
+.table-customers .form-control {
+	height: auto;
+	padding: 3px;
+}
