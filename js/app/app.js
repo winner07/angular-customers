@@ -1,1 +1,1 @@
-angular.module("customers", []);
+angular.module("customers", ["angularMoment"]);

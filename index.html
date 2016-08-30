@@ -6,6 +6,9 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/angular/angular.min.js"></script>
 	<script src="js/app/app.js"></script>
+	<script src="js/components/moment/moment.min.js"></script>
+	<script src="js/components/angular-moment/angular-moment.min.js"></script>
+	<script src="js/app/customer-list/customer-list.providers.js"></script>
 	<script src="js/app/customer-list/customer-list.factory.js"></script>
 	<script src="js/app/customer-list/customer-list.controller.js"></script>
 	<title>Customers</title>
@@ -51,7 +54,7 @@
 					<td>
 						<a href="#" class="btn btn-warning glyphicon glyphicon-pencil" ng-click="customer.isEdit = true" ng-show="!customer.isEdit"></a>
 						<a href="#" class="btn btn-success glyphicon glyphicon-ok" ng-click="customer.isEdit = false; edit(customer)" ng-show="customer.isEdit"></a>
-						<a href="#" class="btn btn-danger glyphicon glyphicon-trash" ng-click="delete(customer.fileName, $index)"></a>
+						<a href="#" class="btn btn-danger glyphicon glyphicon-trash" ng-click="delete(customer, $index)"></a>
 					</td>
 				</tr>
 			</table>
