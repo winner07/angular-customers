@@ -1,10 +1,9 @@
-angular.module("customers").controller("CustomerList", ["$scope", "$http", "getCustomers", "addCustomer", "editCustomer", "deleteCustomer", "moment", function($scope, $http, getCustomers, addCustomer, editCustomer, deleteCustomer, moment){
+angular.module("customers").controller("CustomerList", ["$scope", "$http", "customers", "moment", function($scope, $http, customers, moment){
 	$scope.customers;
 	$scope.customerNew = {};
 	
-	
 	// Get customers JSON
-	getCustomers().then(function(data){
+	customers.get().then(function(data){
 		 $scope.customers = data.data;
 	});
 	
@@ -16,14 +15,14 @@ angular.module("customers").controller("CustomerList", ["$scope", "$http", "getC
 		$scope.customerNew.fileName = "customer-" + date + ".json";
 		$scope.customers.push($scope.customerNew);
 
-		addCustomer($scope.customerNew);
+		customers.add($scope.customerNew);
 		$scope.customerNew = {};
 	};
 	
 	
 	// Edit customer
 	$scope.edit = function(customer){
-		editCustomer(customer);
+		customers.edit(customer);
 	};
 	
 	
@@ -31,7 +30,7 @@ angular.module("customers").controller("CustomerList", ["$scope", "$http", "getC
 	$scope.delete = function(customer, index){
 		if(confirm("Are you sure to delete customer - \"" + customer.name + "\"")){
 			$scope.customers.splice(index, 1);
-			deleteCustomer(customer.fileName);
+			customers.delete(customer.fileName);
 		}
 	};
 }]);
