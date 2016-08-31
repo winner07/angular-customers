@@ -1,4 +1,4 @@
-angular.module("customers").controller("CustomerList", ["$scope", "$http", "customers", "moment", function($scope, $http, customers, moment){
+angular.module("customers").controller("CustomerList", ["$scope", "customers", "moment", function($scope, customers, moment){
 	$scope.customers;
 	$scope.customerNew = {};
 	
